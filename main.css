@@ -1,0 +1,85 @@
+.searchbox.open {width:200px!important;display:inline}
+header {width:100%;background-color:#29B6F6;color:white;height:45px;padding:5px;margin:0px;box-shadow:0px 3px 0px #ddd;user-select:none;padding-top:23px;padding-right:15px;position:fixed;top:0px;left:0px;z-index:4;background-color:#29B6F6} body {margin:0px;overflow-x:hidden;font-family: 'Arial', sans-serif;font-weight:normal;} h1, h2, h3 {font-weight:normal;}
+.navbtn {border-radius:3px;transition:all 1s ease;outline:none;padding:5px;cursor:pointer}
+.navbtn:active, .navbtn:focus, .navbtn:hover {background-color:#ddd;color:#aaa} i {display:inline;font-style:normal}
+header h3 {display:inline;position:fixed;left:45px;top:5px}
+.right {position:fixed;right:25px}
+.left {position:fixed;left:5px}
+main {margin-top:75px;}
+.scrollgallery {overflow:auto;white-space:nowrap}
+.scrollgallery div {display:inline-block;margin:3px;}
+a {color:#29B6F6} header a {color:white}
+::-webkit-scrollbar-track
+{background-color: white;}
+::-webkit-scrollbar
+{width: 10px;background-color: #29B6F6;border-radius:3px}
+::-webkit-scrollbar-thumb
+{background-color: #29B6F6;border-radius:10px}
+footer {width:100%;padding:5px;margin:0px;box-shadow:0px 3px 0px #ddd;background-color:#888;color:white}
+.popup {position:fixed;width:100%;height:100%;z-index:5;top:0px;left:0px;background-color: rgba(50, 50, 50, 0.5);}
+.popup-content {width:40%;margin:30%;background-color:white;box-shadow:5px 5px 20px #aaa;z-index:6;padding:5px;margin-top:10%}
+button {border-radius:3px;transition:background-color 1s ease;outline:none;text-transform:uppercase;color:#ffbf00;border:none;padding:10px;cursor:pointer;margin:5px;user-select:none;background-color:white} button:disabled {opacity:0.5;cursor:default}
+button:active, button:hover {background-color:#ddd;}
+input[type=checkbox] { -webkit-appearance: none; -moz-appearance: none; width: 25px; height: 25px; border: #ddd solid 3px; border-radius: 3px; outline: none; transition: background-color 0.3s ease;} input[type=checkbox]:checked { background-color: #aaa}
+input[type=text], input[type=password], input[type=number] {font-family:Arial, sans-serif;border:none;outline:none;font-size:1em;padding:5px;border-bottom:solid 1px #29B6F6;margin:5px}
+main input[type=text], main input[type=password] {width:95%}
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {border-bottom-color:#29B6F6}
+input[type=text]:disabled, input[type=password]:disabled, input[type=number]:disabled {border-bottom:#BDBDBD 1px dotted;}
+input[type=text]:invalid:focus, input[type=password]:invalid:focus, input[type=number]:invalid:focus {border-bottom-color:#ffbf00}
+button.floating {border-radius:50%;position:fixed;font-size:1.5em;background-color:#ffbf00;color:white;width:60px;height:60px;transition:box-shadow 0.5s ease;}
+button.floating:hover {box-shadow:0px 8px 6px #aaa;}
+.browserError {background-color:#F4511E;color:white;padding:15px;width:100%}
+nav.sidenav {width:0px;height:100%;position:fixed;top:0px;left:0px;z-index:3;background-color:white;overflow-x:hidden;transition:width 0.5s ease;margin-top:75px;}
+nav.sidenav.open {width:300px}
+nav.sidenav a {font-size:1.17em;color:#aaa;background-color:white;display:block;width:100%;cursor:pointer;text-decoration:none;transition:background-color 0.5s ease;padding:3px}
+nav.sidenav a.active {background-color:white;color:#ffbf00}
+nav.sidenav a:hover {color:#ddd}
+.searchbox {width:0px!important;transition:width 0.5s ease;display:none}
+.tabbar {width:100%;background-color:white;padding:5px;margin-top:5px;margin-bottom:5px;padding-left:5px;height:54px;padding-bottom:3px}
+.tabbtn {text-transform:uppercase;color:#aaa;transition:color 0.5s ease,border-bottom-color 0.5s ease;font-size:14px;cursor:pointer;padding:24px;height:100px;box-sizing: inherit;line-height: 44px;user-select:none}
+.tabbtn:hover {color:#ddd}
+.tabbtn.open {color:#ffbf00;border-bottom:3px solid #ffbf00}
+.tab {display:none;width:100%} .tab.open {display:block}
+.card {background-color:white;color:black;box-shadow:3px 3px 3px black;width:200px;display:inline-block;padding:5px;margin:10px}
+input[type=radio] { -webkit-appearance: none; -moz-appearance: none; width: 25px; height: 25px; border: #aaa solid 3px; border-radius: 50%; outline: none; transition: all 0.3s ease;} input[type=radio]:checked { background-color: #ddd}
+input[type=file] {display:none;}
+label.fileLabel {border-radius:3px;transition:background-color 1s ease;outline:none;text-transform:uppercase;color:#29B6F6;border:none;padding:10px;cursor:pointer;margin:5px;user-select:none;background-color:white}
+label.fileDrop {cursor:pointer;opacity:0;transition:opacity 0.5s ease;text-align:center;padding:15px;position:absolute;left:0px;width:100%;}
+label.fileDrop:hover {opacity:1;}
+.code {font-family:monospace;font-size:18px}
+kbd {padding:3px;margin:3px;box-shadow:3px 3px 3px black;}
+details {padding:5px;outline:none;width:100%}
+summary {outline:none;cursor:pointer;}
+.file, .folder {border-bottom:1px solid black;width:100%;margin:3px;padding:5px;}
+.file::before, .folder::before {font-family:"Material Icons";padding-left:5px;padding-right:5px;}
+.folder::before {content: "folder"}
+.file::before {content: "insert_drive_file"}
+.file[data-type=html]::before {content: "web"}
+.file[data-type=css]::before {content: "style"}
+.file[data-type=js]::before, .file[data-type=json]::before {content: "code"}
+.file[data-type=png]::before, .file[data-type=jpg]::before, .file[data-type=jpeg]::before, .file[data-type=gif]::before {content: "image"}
+.file[data-type=codeext]::before {content:"extension"}
+.badbtn {color:#F4511E}
+.toolbar {border-bottom:1px solid black;width:100%;margin:3px;padding:5px;}
+.toolbar i {cursor: pointer;user-select:none;padding:5px;transition:background-color 0.5s ease;}
+.toolbar i:hover {background-color:#ddd}
+.middle-text {position:absolute;left:20%;width:60%;margin-bottom:20px;margin-top:20px}
+main h3, main h4 {color:#29B6F6}
+li {list-style-type: none}
+.tooltip {position: relative;display: inline-block;border-bottom: 1px dotted black;cursor:help}
+.tooltip .tooltiptext {visibility: hidden;width: 120px;background-color: #555;color: #fff;text-align: center;padding: 5px 0;border-radius: 6px;position: absolute;z-index: 1;bottom: 125%;left: 50%;margin-left: -60px;opacity: 0;transition: opacity 0.5s;}
+.tooltip:hover .tooltiptext {visibility: visible;opacity: 1;}
+.snackbar {background-color:#aaa;color:white;border-radius:3px;position:fixed;bottom:-50px;transition:bottom 0.5s ease;right:20%;width:60%;padding:10px;}
+.snackbar.show {bottom:0px;}
+.player {border:none;width:100%;height:500px;}
+.instructions {width:100%;height:100px;background-color:#aaa} .instructions p {outline:none;height:75px;color:white} .instructions h4 {display:none}
+.instructions.editable p {border:dashed 3px #ddd;color:black} .instructions.editable {background-color:white} .instructions.editable h4 {display:block}
+@media only screen and (max-width:500px){.snackbar {right:0px;width:95%;border-radius:0px} .middle-text{left:5%;width:90%;margin-top:5px;margin-bottom:5px} .player{height:300px}}
+.tag {color:white;background-color:#ddd;border-radius:3px;padding:5px;margin-right:5px;transition:background-color 0.5s ease;}
+.tag:hover {background-color:#ffbf00;} .tag.active {background-color:#29B6F6}
+select {border:none;padding:3px;outline:none}
+button.accordion {text-transform:none;background-color: #eee;color: #444;cursor: pointer;padding: 18px;width: 100%;text-align: left;border: none;outline: none;transition: 0.4s;}
+button.accordion.active, button.accordion:hover {background-color: #ddd;}
+div.panel {padding: 0 18px;background-color: white;display: none;}
+button.accordion:after {content: '\02795'; /* Unicode character for "plus" sign (+) */font-size: 13px;color: #777;float: right;margin-left: 5px;}
+button.accordion.active:after {content: "\2796"; /* Unicode character for "minus" sign (-) */}

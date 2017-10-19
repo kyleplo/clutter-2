@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head>
+<title>Edit clutter - Clutter 2</title>
+<link href="./main.css" rel="stylesheet"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="icon" href="./favicon.ico"></head><body onload="init()">
+<header><h3 style="width:calc(100% - 50px)"><a href="./index.html">Clutter 2</a> - Create - Connect - Share <a href="./create.html" style="float:right">+ New Clutter</a></h3></header>
+<main id="main">
+<noscript class="browserError"><p>Javascript is not enabled in your browser. Please enabled it, switch to a browser that supports Javascript.</p></noscript>
+<div class="middle-text" id="list"><div><h3>Edit Clutter</h3><p>Be sure to add all projects before typing in URLs.</p><input type="checkbox" id="isGame"> Require password to continue<br><button onclick="addProject()">Add project +</button> <button onclick="share();">Share</button></div></div></main>
+<button class="floating material-icons" style="bottom:50px;right:25px;" onclick="location.href='./create.html'">add</button>
+
+<script>
+var list = document.getElementById('list');var p;
+function addProject(){isGame = document.getElementById('isGame').checked;if(isGame){list.innerHTML += "<div>Project URL: <input type='text' value='https://scratch.mit.edu/projects/'><br>Password: <input type='text' maxlength='10'></div>";document.getElementById('isGame').checked = true;}else{list.innerHTML += "<div>Project URL: <input type='text' value='https://scratch.mit.edu/projects/'></div>";}}
+function init(){
+var hash = location.hash.slice(2);
+if(hash === "tory"){console.log("Story mode!")}else if(hash === "ame"){console.log("Game mode!");document.getElementById('isGame').checked = true}else{
+var projects = hash.split("-");
+if(location.hash[1] === "s"){console.log("Story mode!");for(var i = 0;i < projects.length;i++){list.innerHTML += "<div>Project URL: <input type='text' value='https://scratch.mit.edu/projects/" + projects[i] + "'></div>";}}else{console.log("Game mode!");for(var i = 0;i < projects.length;i+=2){list.innerHTML += "<div>Project URL: <input type='text' value='https://scratch.mit.edu/projects/" + projects[i] + "'><br>Password: <input type='text' maxlength='10' value='" + projects[i+1] + "'></div>";document.getElementById('isGame').checked = true;}}
+}}
+function getHash(){
+var hash = "#";
+if(document.getElementById('isGame').checked){hash+="g"}else{hash+="s"};
+p = list.children;
+console.log(p);
+for(var i = 1;i < p.length;i++){console.log(p[i]);
+if(p[i].children[0].value){hash += p[i].children[0].value.slice(33);if(hash[1] === "g"){hash+="-";hash += p[i].children[2].value;};hash+="-"}};return hash;}
+function share(){
+try{var hash = getHash();}catch(err){alert("Whoops! Something went wrong!");return false};
+window.open("./clutter.html" + hash);}
+</script></body></html>
